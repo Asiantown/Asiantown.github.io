@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm Ryan Yin — a sophomore at The Village School in Houston, TX.  
+Hi! I'm Ryan Yin — a sophomore at [The Village School](https://www.nordangliaeducation.com/village-houston) in Houston, TX.  
 I’m someone who loves thinking in systems, optimizing workflows, and solving messy problems — whether through code, strategy, or good old trial and error.
 
 Lately, I've been exploring **operations research**, **applied math**, and **startup design** — figuring out how smart processes and great tools can make life simpler, faster, or just cooler.
