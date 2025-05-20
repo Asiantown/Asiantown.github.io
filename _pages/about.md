@@ -16,7 +16,7 @@ Lately, I've been exploring **operations research**, **applied math**, and **sta
 But outside of school and projects, I’m pretty much everywhere:
 - 🎮 Playing **Brawlhalla (Platinum)** or **Fortnite (Unreal)**
 - 🏸 Getting competitive with **badminton, tennis, football, pickleball**, and random gym PRs
-- 🎾 Coaching little kids in tennis (nothing teaches patience like this)
+- 🎾 Coaching tennis 
 - 🎧 Listening to **NIKI** and vibing to late-night lo-fi playlists
 - 🥩 Perfecting my steak-searing skills — cast iron > nonstick
 
