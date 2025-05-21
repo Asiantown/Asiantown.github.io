@@ -41,7 +41,7 @@ Cal("inline", {
 });
 
 Cal("ui", {
-  theme: "light",
+  theme: "dark",
   styles: {
     branding: {
       brandColor: "#000000"
