@@ -12,12 +12,17 @@ redirect_from:
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
   #intro-cover {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    right: 0;
+    bottom: 0;
     background-color: #1e1e1e;
     color: #eaeaea;
     display: flex;
@@ -32,7 +37,7 @@ redirect_from:
   }
 
   #intro-cover h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 800;
     opacity: 0;
     margin: 0;
@@ -40,11 +45,12 @@ redirect_from:
   }
 
   #intro-cover h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 400;
     opacity: 0;
     margin-top: 1rem;
     transition: opacity 1.5s ease;
+    max-width: 90%;
   }
 
   #intro-cover h1.visible,
@@ -81,18 +87,21 @@ redirect_from:
     subtitle.classList.remove("visible");
     title.classList.remove("visible");
 
+    // Fade in title
     setTimeout(() => {
       title.classList.add("visible");
     }, 100);
 
+    // Show subtitle after 3s
     setTimeout(() => {
       subtitle.classList.add("visible");
-    }, 5000);
+    }, 3000);
 
+    // Fade out everything after 6s
     setTimeout(() => {
       cover.classList.add("hidden");
       document.body.classList.add("revealed");
-    }, 10000);
+    }, 6000);
   });
 </script>
 {% endraw %}
