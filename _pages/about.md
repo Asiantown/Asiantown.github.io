@@ -1,3 +1,77 @@
+<!-- Intro Cover Animation -->
+<style>
+  #intro-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0d0d0d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s ease;
+  }
+
+  #intro-cover h1, #intro-cover h2 {
+    opacity: 0;
+    transition: opacity 1s ease;
+    text-align: center;
+    margin: 0.5em;
+    max-width: 90%;
+  }
+
+  #intro-cover h1.visible, #intro-cover h2.visible {
+    opacity: 1;
+  }
+
+  #intro-cover.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  body.revealed {
+    overflow: auto;
+  }
+</style>
+
+<div id="intro-cover">
+  <h1 id="intro-title">Hi, I'm Ryan Yin</h1>
+  <h2 id="intro-subtitle">I use optimization and operations research to power smarter decisions in tech, business, and beyond.</h2>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const title = document.getElementById("intro-title");
+    const subtitle = document.getElementById("intro-subtitle");
+    const cover = document.getElementById("intro-cover");
+
+    subtitle.classList.remove("visible");
+    title.classList.remove("visible");
+
+    setTimeout(() => {
+      title.classList.add("visible");
+    }, 100);
+
+    setTimeout(() => {
+      subtitle.classList.add("visible");
+    }, 2000);
+
+    setTimeout(() => {
+      cover.classList.add("hidden");
+      document.body.classList.add("revealed");
+    }, 4000);
+  });
+</script>
+<!-- End of Intro Cover -->
+
 ---
 permalink: /
 title: "About Me"
