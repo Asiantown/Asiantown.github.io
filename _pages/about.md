@@ -8,21 +8,27 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm Ryan Yin — a sophomore at [The Village School](https://www.nordangliaeducation.com/village-houston) in Houston, TX.  
-I’m someone who loves thinking in systems, optimizing workflows, and solving messy problems — whether through code, strategy, or good old trial and error.
+# Hi, I'm Ryan Yin
+
+## I use optimization and operations research to power smarter decisions in tech, business, and beyond.
+
+### About Me
+I'm a sophomore at The Village School in Houston, TX.
+I'm someone who loves thinking in systems, optimizing workflows, and solving messy problems — whether through code, strategy, or good old trial and error.
 
 Lately, I've been exploring operations research, applied math, and startup design — figuring out how smart processes and great tools can make life simpler, faster, or just cooler.
 
-But outside of school and projects, I’m pretty much everywhere:
-- 🎮 Playing Brawlhalla (Platinum) or Fortnite (Unreal)
-- 🏸 Getting competitive with **badminton, tennis, football, pickleball**, and random gym PRs
-- 🎾 Coaching tennis 
-- 🎧 Listening to [NIKI](https://open.spotify.com/artist/2kxP07DLgs4xlWz8YHlvfh) and vibing to late-night lo-fi playlists
-- 🥩 Perfecting my steak-searing skills — cast iron > nonstick
+But outside of school and projects, I'm pretty much everywhere:
 
-I like building things, improving things, and making things that last. Whether it's launching a new project, running an AAU basketball team, or writing late at night — I’m always chasing that next idea worth committing to.
+🎮 Playing Brawlhalla (Platinum) or Fortnite (Unreal)
+🏸 Getting competitive with badminton, tennis, football, pickleball, and random gym PRs
+🎾 Coaching tennis
+🎧 Listening to NIKI and vibing to late-night lo-fi playlists
+🥩 Perfecting my steak-searing skills — cast iron > nonstick
 
-Let’s build something cool.
+I like building things, improving things, and making things that last. Whether it's launching a new project, running an AAU basketball team, or writing late at night — I'm always chasing that next idea worth committing to.
+
+Let's build something cool.
 
 <section id="contactme">
   <h2>Contact Me</h2>
