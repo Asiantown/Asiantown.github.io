@@ -1,7 +1,6 @@
 ---
 layout: single
 title: "Contact Me"
-permalink: /contactme/
 author_profile: true
 ---
 
