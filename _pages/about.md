@@ -78,21 +78,17 @@ redirect_from:
     const subtitle = document.getElementById("intro-subtitle");
     const cover = document.getElementById("intro-cover");
 
-    // Reset visibility
-    title.classList.remove("visible");
     subtitle.classList.remove("visible");
+    title.classList.remove("visible");
 
-    // Show title
     setTimeout(() => {
       title.classList.add("visible");
     }, 100);
 
-    // Show subtitle after 5s
     setTimeout(() => {
       subtitle.classList.add("visible");
     }, 5000);
 
-    // Fade out everything after 10s
     setTimeout(() => {
       cover.classList.add("hidden");
       document.body.classList.add("revealed");
@@ -100,6 +96,7 @@ redirect_from:
   });
 </script>
 {% endraw %}
+
 
 
 
