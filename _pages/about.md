@@ -18,50 +18,39 @@ redirect_from:
   - /about.html
 ---
 
-<!-- Hero Intro Cover -->
+---
+permalink: /
+title: "About Me"
+excerpt: "About Me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
+<!-- Minimal Hero Cover -->
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-
   #intro-cover {
     position: fixed;
     inset: 0;
-    background-color: #1e1e1e;
-    color: #eaeaea;
+    background: #111;
+    color: #fff;
+    font-family: sans-serif;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     z-index: 9999;
     transition: opacity 1s ease;
-    font-family: 'Inter', sans-serif;
     text-align: center;
-    padding: 2rem;
   }
 
-  #intro-title, #intro-subtitle {
+  #intro-text {
+    font-size: 3rem;
     opacity: 0;
-    transition: opacity 1.5s ease;
+    transition: opacity 2s ease;
   }
 
-  #intro-title {
-    font-size: 4rem;
-    font-weight: 800;
-    margin: 0;
-  }
-
-  #intro-subtitle {
-    font-size: 1.75rem;
-    font-weight: 400;
-    margin-top: 1rem;
-    max-width: 90%;
-  }
-
-  .visible {
+  #intro-text.visible {
     opacity: 1;
   }
 
@@ -80,32 +69,25 @@ redirect_from:
 </style>
 
 <div id="intro-cover">
-  <h1 id="intro-title">Hi, I’m Ryan Yin</h1>
-  <h2 id="intro-subtitle">I use optimization and operations research to power smarter decisions in tech, business, and beyond.</h2>
+  <div id="intro-text">Hi, I’m Ryan Yin</div>
 </div>
 
 {% raw %}
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    var title = document.getElementById("intro-title");
-    var subtitle = document.getElementById("intro-subtitle");
-    var cover = document.getElementById("intro-cover");
+    const text = document.getElementById("intro-text");
+    const cover = document.getElementById("intro-cover");
 
-    // Step 1: show title
-    setTimeout(function () {
-      title.classList.add("visible");
+    // Fade in title
+    setTimeout(() => {
+      text.classList.add("visible");
     }, 100);
 
-    // Step 2: show subtitle after 3s
-    setTimeout(function () {
-      subtitle.classList.add("visible");
-    }, 3000);
-
-    // Step 3: hide cover after 6s
-    setTimeout(function () {
+    // Fade out cover after 4 seconds
+    setTimeout(() => {
       cover.classList.add("hidden");
       document.body.classList.add("revealed");
-    }, 6000);
+    }, 4000);
   });
 </script>
 {% endraw %}
