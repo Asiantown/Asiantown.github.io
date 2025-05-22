@@ -1,3 +1,13 @@
+---
+permalink: /
+title: "About Me"
+excerpt: "About Me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
 <!-- Intro Cover Animation -->
 <style>
   #intro-cover {
@@ -47,6 +57,7 @@
   <h2 id="intro-subtitle">I use optimization and operations research to power smarter decisions in tech, business, and beyond.</h2>
 </div>
 
+{% raw %}
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const title = document.getElementById("intro-title");
@@ -70,17 +81,10 @@
     }, 4000);
   });
 </script>
+{% endraw %}
+
 <!-- End of Intro Cover -->
 
----
-permalink: /
-title: "About Me"
-excerpt: "About Me"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
----
 
 Hi! I'm Ryan Yin — a sophomore at [The Village School](https://www.nordangliaeducation.com/village-houston) in Houston, TX.  
 I’m someone who loves thinking in systems, optimizing workflows, and solving messy problems — whether through code, strategy, or good old trial and error.
