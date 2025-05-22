@@ -15,7 +15,7 @@ redirect_from:
     margin: 0;
     padding: 0;
   }
-  /* Animation bar at top */
+  /* Animated intro bar at top */
   #intro-bar {
     position: fixed;
     top: 0;
@@ -26,7 +26,7 @@ redirect_from:
     text-align: center;
     font-size: 2.5rem;
     font-weight: 800;
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 0;
     z-index: 9999;
     transition: opacity 1s ease;
     pointer-events: none;
@@ -73,10 +73,10 @@ redirect_from:
   setTimeout(() => {
     document.getElementById("intro-bar").classList.add("fade-out");
   }, 4000);
-  // Optionally remove the bar after fade
+  // Remove the bar from DOM after fade
   setTimeout(() => {
     const el = document.getElementById("intro-bar");
-    if(el) el.style.display = "none";
+    if(el) el.parentNode.removeChild(el);
   }, 5000);
 </script>
 {% endraw %}
@@ -103,7 +103,7 @@ redirect_from:
   - 🎧 Listening to [NIKI](https://open.spotify.com/artist/2kxP07DLgs4xlWz8YHlvfh) and vibing to late-night lo-fi playlists
   - 🥩 Perfecting my steak-searing skills — cast iron > nonstick
 
-  I like building things, improving things, and making things that last. Whether it's launching a new project, running an AAU basketball team, or writing late at night — I'm always chasing that n[...]
+  I like building things, improving things, and making things that last. Whether it's launching a new project, running an AAU basketball team, or writing late at night — I'm always chasing that next thing.
 
   Let's build something cool.
 
