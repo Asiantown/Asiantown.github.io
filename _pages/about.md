@@ -8,14 +8,21 @@ redirect_from:
   - /about.html
 ---
 
-<!-- Minimal Hero Cover -->
+<!-- Hero Intro Cover -->
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
   #intro-cover {
     position: fixed;
     inset: 0;
     background: #111;
     color: #fff;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,7 +32,8 @@ redirect_from:
   }
 
   #intro-text {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 800;
     opacity: 0;
     transition: opacity 2s ease;
   }
@@ -58,12 +66,10 @@ redirect_from:
     const text = document.getElementById("intro-text");
     const cover = document.getElementById("intro-cover");
 
-    // Fade in title
     setTimeout(() => {
       text.classList.add("visible");
     }, 100);
 
-    // Fade out cover after 4 seconds
     setTimeout(() => {
       cover.classList.add("hidden");
       document.body.classList.add("revealed");
@@ -72,10 +78,7 @@ redirect_from:
 </script>
 {% endraw %}
 
-
-
-
-
+<!-- Real Content Starts Here -->
 
 Hi! I'm Ryan Yin — a sophomore at [The Village School](https://www.nordangliaeducation.com/village-houston) in Houston, TX.  
 I’m someone who loves thinking in systems, optimizing workflows, and solving messy problems — whether through code, strategy, or good old trial and error.
@@ -97,4 +100,3 @@ Let’s build something cool.
   <h2>Contact Me</h2>
   {% include contactme.html %}
 </section>
-
