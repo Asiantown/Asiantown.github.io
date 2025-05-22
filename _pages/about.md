@@ -8,96 +8,85 @@ redirect_from:
   - /about.html
 ---
 
-<!-- Hero Intro Animation -->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-  
-  /* Full screen intro cover */
-  #intro-cover {
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  /* Animation bar at top */
+  #intro-bar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
     background: #111;
     color: #fff;
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    padding: 2rem 0 2rem 0;
     z-index: 9999;
     transition: opacity 1s ease;
-  }
-  #intro-cover.fade-out {
-    opacity: 0;
     pointer-events: none;
   }
-  #intro-text {
-    font-size: 4rem;
-    font-weight: 800;
-    text-align: center;
+  #intro-bar.fade-out {
+    opacity: 0;
   }
-
-  /* Hide main content until intro is done */
+  /* Push down main content so it doesn't hide behind intro-bar */
   #main-content {
-    display: none;
+    margin-top: 5.5rem;
   }
-  #main-content.visible {
-    display: block;
-  }
-
-  /* Hero section that stays at top */
   #hero-section {
     background: #111;
     color: #fff;
-    font-family: 'Inter', sans-serif;
     text-align: center;
     padding: 3rem 1rem;
     font-size: 4rem;
     font-weight: 800;
+    margin-bottom: 2rem;
   }
   @media (max-width: 768px) {
-    #intro-text, #hero-section {
-      font-size: 2.5rem;
+    #intro-bar {
+      font-size: 1.5rem;
+      padding: 1.2rem 0;
+    }
+    #main-content {
+      margin-top: 3.5rem;
+    }
+    #hero-section {
+      font-size: 2rem;
+      padding: 2rem 0.5rem;
     }
   }
 </style>
 
-<!-- Fullscreen intro (disappears after animation) -->
-<div id="intro-cover">
-  <div id="intro-text">Hi, I'm Ryan Yin</div>
+<!-- Animated intro bar at the top -->
+<div id="intro-bar">
+  Hi, I'm Ryan Yin
 </div>
 
 {% raw %}
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const cover = document.getElementById("intro-cover");
-    const mainContent = document.getElementById("main-content");
-
-    // After 4 seconds, fade out the intro cover
-    setTimeout(() => {
-      cover.classList.add("fade-out");
-    }, 4000);
-
-    // Remove it and show main content after fade
-    setTimeout(() => {
-      cover.style.display = "none";
-      mainContent.classList.add("visible");
-    }, 5000);
-  });
+  // Fade out the intro bar after 4 seconds
+  setTimeout(() => {
+    document.getElementById("intro-bar").classList.add("fade-out");
+  }, 4000);
+  // Optionally remove the bar after fade
+  setTimeout(() => {
+    const el = document.getElementById("intro-bar");
+    if(el) el.style.display = "none";
+  }, 5000);
 </script>
 {% endraw %}
 
-<!-- All main page content is wrapped here -->
 <div id="main-content">
-  <!-- Permanent hero section at top of page -->
   <section id="hero-section">
     Hi, I'm Ryan Yin
   </section>
 
-  <!-- Regular page content -->
   <div style="background: #fff; padding: 2rem;">
-
   ## About Me
 
   Hi! I'm Ryan Yin — a sophomore at [The Village School](https://www.nordangliaeducation.com/village-houston) in Houston, TX.  
@@ -122,6 +111,5 @@ redirect_from:
     <h2>Contact Me</h2>
     {% include contactme.html %}
   </section>
-
   </div>
 </div>
