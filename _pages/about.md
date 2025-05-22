@@ -36,25 +36,25 @@ redirect_from:
     padding: 2rem;
   }
 
-  #intro-cover h1 {
-    font-size: 4rem;
-    font-weight: 800;
+  #intro-title, #intro-subtitle {
     opacity: 0;
-    margin: 0;
     transition: opacity 1.5s ease;
   }
 
-  #intro-cover h2 {
+  #intro-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0;
+  }
+
+  #intro-subtitle {
     font-size: 1.75rem;
     font-weight: 400;
-    opacity: 0;
     margin-top: 1rem;
-    transition: opacity 1.5s ease;
     max-width: 90%;
   }
 
-  #intro-cover h1.visible,
-  #intro-cover h2.visible {
+  .visible {
     opacity: 1;
   }
 
@@ -84,20 +84,17 @@ redirect_from:
     const subtitle = document.getElementById("intro-subtitle");
     const cover = document.getElementById("intro-cover");
 
-    subtitle.classList.remove("visible");
-    title.classList.remove("visible");
-
     // Fade in title
     setTimeout(() => {
       title.classList.add("visible");
     }, 100);
 
-    // Show subtitle after 3s
+    // Fade in subtitle after 3s
     setTimeout(() => {
       subtitle.classList.add("visible");
     }, 3000);
 
-    // Fade out everything after 6s
+    // Hide entire intro after 6s
     setTimeout(() => {
       cover.classList.add("hidden");
       document.body.classList.add("revealed");
@@ -105,6 +102,7 @@ redirect_from:
   });
 </script>
 {% endraw %}
+
 
 
 
