@@ -8,6 +8,16 @@ redirect_from:
   - /about.html
 ---
 
+---
+permalink: /
+title: "About Me"
+excerpt: "About Me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
 <!-- Hero Intro Cover -->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
@@ -19,10 +29,7 @@ redirect_from:
 
   #intro-cover {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-color: #1e1e1e;
     color: #eaeaea;
     display: flex;
@@ -79,29 +86,30 @@ redirect_from:
 
 {% raw %}
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const title = document.getElementById("intro-title");
-    const subtitle = document.getElementById("intro-subtitle");
-    const cover = document.getElementById("intro-cover");
+  document.addEventListener("DOMContentLoaded", function () {
+    var title = document.getElementById("intro-title");
+    var subtitle = document.getElementById("intro-subtitle");
+    var cover = document.getElementById("intro-cover");
 
-    // Fade in title
-    setTimeout(() => {
+    // Step 1: show title
+    setTimeout(function () {
       title.classList.add("visible");
     }, 100);
 
-    // Fade in subtitle after 3s
-    setTimeout(() => {
+    // Step 2: show subtitle after 3s
+    setTimeout(function () {
       subtitle.classList.add("visible");
     }, 3000);
 
-    // Hide entire intro after 6s
-    setTimeout(() => {
+    // Step 3: hide cover after 6s
+    setTimeout(function () {
       cover.classList.add("hidden");
       document.body.classList.add("revealed");
     }, 6000);
   });
 </script>
 {% endraw %}
+
 
 
 
