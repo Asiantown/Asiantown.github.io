@@ -12,18 +12,13 @@ redirect_from:
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
   
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  #intro-cover {
+  #intro-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: #111;
+    background: rgba(17, 17, 17, 0.9);
     color: #fff;
     font-family: 'Inter', sans-serif;
     display: flex;
@@ -33,6 +28,7 @@ redirect_from:
     opacity: 1;
     transition: opacity 1s ease;
     text-align: center;
+    pointer-events: none; /* Allows scrolling underneath from start */
   }
   
   #intro-text {
@@ -46,12 +42,11 @@ redirect_from:
     opacity: 1;
   }
   
-  #intro-cover.fade-out {
+  #intro-overlay.fade-out {
     opacity: 0;
-    pointer-events: none;
   }
   
-  #intro-cover.hidden {
+  #intro-overlay.hidden {
     display: none;
   }
   
@@ -64,7 +59,7 @@ redirect_from:
   }
 </style>
 
-<div id="intro-cover">
+<div id="intro-overlay">
   <div id="intro-text">Hi, I'm Ryan Yin</div>
 </div>
 
@@ -72,7 +67,7 @@ redirect_from:
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const text = document.getElementById("intro-text");
-    const cover = document.getElementById("intro-cover");
+    const overlay = document.getElementById("intro-overlay");
     
     // Fade in text immediately
     setTimeout(() => {
@@ -81,12 +76,12 @@ redirect_from:
     
     // Wait 4 seconds, then start fade out
     setTimeout(() => {
-      cover.classList.add("fade-out");
+      overlay.classList.add("fade-out");
     }, 4000);
     
     // Remove from DOM after fade completes
     setTimeout(() => {
-      cover.classList.add("hidden");
+      overlay.classList.add("hidden");
     }, 5000);
   });
 </script>
