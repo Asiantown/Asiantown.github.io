@@ -33,7 +33,6 @@ redirect_from:
     opacity: 1;
     transition: opacity 1s ease;
     text-align: center;
-    pointer-events: none; /* Allows scrolling underneath */
   }
   
   #intro-text {
@@ -49,6 +48,7 @@ redirect_from:
   
   #intro-cover.fade-out {
     opacity: 0;
+    pointer-events: none;
   }
   
   #intro-cover.hidden {
