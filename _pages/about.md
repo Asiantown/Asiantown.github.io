@@ -8,33 +8,47 @@ redirect_from:
   - /about.html
 ---
 
-<!-- Intro Cover Animation -->
+<!-- Hero Intro Cover -->
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
   #intro-cover {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #0d0d0d;
-    color: white;
+    background-color: #1e1e1e;
+    color: #eaeaea;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 9999;
     transition: opacity 1s ease;
-  }
-
-  #intro-cover h1, #intro-cover h2 {
-    opacity: 0;
-    transition: opacity 1s ease;
+    font-family: 'Inter', sans-serif;
     text-align: center;
-    margin: 0.5em;
-    max-width: 90%;
+    padding: 2rem;
   }
 
-  #intro-cover h1.visible, #intro-cover h2.visible {
+  #intro-cover h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    opacity: 0;
+    margin: 0;
+    transition: opacity 1.5s ease;
+  }
+
+  #intro-cover h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: 0;
+    margin-top: 1rem;
+    transition: opacity 1.5s ease;
+  }
+
+  #intro-cover h1.visible,
+  #intro-cover h2.visible {
     opacity: 1;
   }
 
@@ -53,7 +67,7 @@ redirect_from:
 </style>
 
 <div id="intro-cover">
-  <h1 id="intro-title">Hi, I'm Ryan Yin</h1>
+  <h1 id="intro-title">Hi, I’m Ryan Yin</h1>
   <h2 id="intro-subtitle">I use optimization and operations research to power smarter decisions in tech, business, and beyond.</h2>
 </div>
 
@@ -64,26 +78,29 @@ redirect_from:
     const subtitle = document.getElementById("intro-subtitle");
     const cover = document.getElementById("intro-cover");
 
-    subtitle.classList.remove("visible");
+    // Reset visibility
     title.classList.remove("visible");
+    subtitle.classList.remove("visible");
 
+    // Show title
     setTimeout(() => {
       title.classList.add("visible");
     }, 100);
 
+    // Show subtitle after 5s
     setTimeout(() => {
       subtitle.classList.add("visible");
-    }, 2000);
+    }, 5000);
 
+    // Fade out everything after 10s
     setTimeout(() => {
       cover.classList.add("hidden");
       document.body.classList.add("revealed");
-    }, 4000);
+    }, 10000);
   });
 </script>
 {% endraw %}
 
-<!-- End of Intro Cover -->
 
 
 Hi! I'm Ryan Yin — a sophomore at [The Village School](https://www.nordangliaeducation.com/village-houston) in Houston, TX.  
