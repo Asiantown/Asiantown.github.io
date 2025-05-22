@@ -12,96 +12,82 @@ redirect_from:
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
   
-  body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  
-  /* The permanent hero text at top of page */
-  #hero-text {
-    font-family: 'Inter', sans-serif;
-    font-size: 4rem;
-    font-weight: 800;
-    color: #fff;
-    text-align: center;
-    padding: 2rem 1rem;
-    margin: 0;
-    background: #111;
-    opacity: 1;
-  }
-  
-  /* Fullscreen overlay that covers everything during intro */
-  #intro-overlay {
+  /* Full screen intro cover */
+  #intro-cover {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     background: #111;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 9999;
-    opacity: 1;
-    transition: opacity 1.5s ease;
+    transition: opacity 1s ease;
   }
   
-  #intro-overlay.fade-out {
+  #intro-cover.fade-out {
     opacity: 0;
     pointer-events: none;
   }
   
-  #intro-overlay.hidden {
-    display: none;
+  #intro-text {
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
   }
   
-  /* Hide page content initially */
-  .page-content {
-    opacity: 0;
-    transition: opacity 1s ease;
+  /* Hero section that stays at top */
+  #hero-section {
+    background: #111;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 3rem 1rem;
+    font-size: 4rem;
+    font-weight: 800;
   }
   
-  .page-content.visible {
-    opacity: 1;
-  }
-  
-  /* Responsive text sizing */
   @media (max-width: 768px) {
-    #hero-text {
+    #intro-text, #hero-section {
       font-size: 2.5rem;
-      padding: 1.5rem 1rem;
     }
   }
 </style>
 
-<!-- Permanent hero text that stays at top -->
-<div id="hero-text">Hi, I'm Ryan Yin</div>
-
-<!-- Fullscreen overlay for intro animation -->
-<div id="intro-overlay"></div>
+<!-- Fullscreen intro (disappears after animation) -->
+<div id="intro-cover">
+  <div id="intro-text">Hi, I'm Ryan Yin</div>
+</div>
 
 {% raw %}
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const overlay = document.getElementById("intro-overlay");
-    const pageContent = document.querySelector(".page-content");
+    const cover = document.getElementById("intro-cover");
     
-    // After 4 seconds, start fading out the overlay
+    // After 4 seconds, fade out the intro cover
     setTimeout(() => {
-      overlay.classList.add("fade-out");
-      if (pageContent) {
-        pageContent.classList.add("visible");
-      }
+      cover.classList.add("fade-out");
     }, 4000);
     
-    // Remove overlay completely after fade
+    // Remove it completely after fade
     setTimeout(() => {
-      overlay.classList.add("hidden");
-    }, 5500);
+      cover.style.display = "none";
+    }, 5000);
   });
 </script>
 {% endraw %}
 
-<!-- Page Content (will fade in after intro) -->
-<div class="page-content">
+<!-- Permanent hero section at top of page -->
+<section id="hero-section">
+  Hi, I'm Ryan Yin
+</section>
+
+<!-- Regular page content -->
+<div style="background: #fff; padding: 2rem;">
 
 ## About Me
 
