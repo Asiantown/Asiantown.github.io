@@ -23,3 +23,9 @@ But outside of school and projects, I’m pretty much everywhere:
 I like building things, improving things, and making things that last. Whether it's launching a new project, running an AAU basketball team, or writing late at night — I’m always chasing that next idea worth committing to.
 
 Let’s build something cool.
+
+<section id="contactme">
+  <h2>Contact Me</h2>
+  {% include contactme.html %}
+</section>
+
