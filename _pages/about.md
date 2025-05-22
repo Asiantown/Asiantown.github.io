@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-# Hi, I'm Ryan Yin
+<div style="font-size: 4em; font-weight: bold; margin-bottom: 0.5em;">Hi, I'm Ryan Yin</div>
 
-## I use optimization and operations research to power smarter decisions in tech, business, and beyond.
+<div style="font-size: 2.5em; font-weight: normal; margin-bottom: 1em;">I use optimization and operations research to power smarter decisions in tech, business, and beyond.</div>
 
 ### About Me
 I'm a sophomore at The Village School in Houston, TX.
